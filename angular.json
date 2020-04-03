@@ -150,5 +150,8 @@
       }
     }
   },
-  "defaultProject": "DistritoCultural"
+  "defaultProject": "DistritoCultural",
+  "cli": {
+    "analytics": "924803ae-652b-4640-9f6a-f2292637ea3d"
+  }
 }

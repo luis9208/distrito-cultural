@@ -1,0 +1,21 @@
+a{
+    color: white !important;
+}
+
+.text-white{
+    color: white !important;
+}
+.navbarAlinear {
+    width: 100%;
+    text-align: center;
+   
+}
+.fondoPeques{
+    width: 100% !important;
+    background-color: red;
+    background-image: url("https://drscdn.500px.org/photo/1013378003/m%3D900/v2?sig=a85f9d871e2886023a58c9d65ea8682a6b2f5dcf80abb920ef4b897d9f305d19");
+}
+.li-nav{
+    float: none;
+    display: inline-block;
+}
