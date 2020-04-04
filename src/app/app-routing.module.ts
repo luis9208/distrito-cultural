@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/users/login/login.component';
 import { UsComponent } from './components/about/us/us.component';
-import { HomeComponent } from './components/home/home.component';
 import { HistoryComponent } from './components/about/history/history.component';
 import { DonationsComponent } from './components/about/donations/donations.component';
 import { Page404Component } from './components/page404/page404.component';
@@ -15,13 +14,8 @@ const routes: Routes = [
   { path: 'iniciar-sesion', component: LoginComponent },
   { path: 'nosotros', component: UsComponent },
   { path: 'historia', component: HistoryComponent },
-<<<<<<< HEAD
   { path: 'home', component: HomeComponent },
   {path:'donaciones', component:DonationsComponent}
-=======
-  { path: 'donaciones', component: DonationsComponent },
-  { path: '**', component: Page404Component}
->>>>>>> cc3060a3d3a31e6ac43896faaacf79530de263e2
   
 ];
 
