@@ -1,0 +1,50 @@
+<section>
+    <div class="card border-0">
+
+        <div class="card-body bg-transparent">
+
+            <form>
+
+                <fieldset class="form-group">
+                    <legend class="col-form-legend col-sm-6">Iniciar sesión</legend>
+
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" class="form-control" name="correo" id="correo"
+                            aria-describedby="emailHelpId" placeholder="correo">
+                    </div>
+                    <div class="form-group">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="text" class="form-control" name="contraseña" id="contraseña"
+                            aria-describedby="helpId" placeholder="contraseña">
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-12">
+                        <button type="submit" class="btn btn-primary large">Iniciar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="form-group row">
+                <div class="col-sm-2 col-sm-12">
+                    <button type="submit" class="btn btn-primary">
+                        <span>
+                           Facebook <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <button type="button" class="btn btn-success" (click)="authService.loginGoogle()">
+                    <span>
+                        <i class="fa fa-google" aria-hidden="true"> Google </i>
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>

@@ -50,7 +50,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     AngularFireDatabaseModule,
     BrowserAnimationsModule,  
   ],
-  providers: [],
+  providers: [AngularFireModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

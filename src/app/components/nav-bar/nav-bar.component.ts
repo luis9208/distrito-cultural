@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
+  logged = false;
   login = 'Iniciar sesión';
+
   constructor() { }
   ngOnInit() {
   }
+
+  isLogged() {
+    if (this.logged) {
+      return this.login = 'perfil';
+    }
+    else {
+      return this.login;
+    }
+  }
+
+  
 
 }

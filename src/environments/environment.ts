@@ -4,16 +4,16 @@
 
 export const environment = {
   production: false,
-  firebaseConfig : {
-  apiKey: "AIzaSyA-wJr3jVrSMDE9IqgIawrBIO2KLpysSsw",
-  authDomain: "funddistcult.firebaseapp.com",
-  databaseURL: "https://funddistcult.firebaseio.com",
-  projectId: "funddistcult",
-  storageBucket: "funddistcult.appspot.com",
-  messagingSenderId: "518404752811",
-  appId: "1:518404752811:web:7b60a0004671dac4fabeee",
-  measurementId: "G-X8GNE9Z7NX"
-}
+  firebaseConfig: {
+    apiKey: "AIzaSyA-wJr3jVrSMDE9IqgIawrBIO2KLpysSsw",
+    authDomain: "funddistcult.firebaseapp.com",
+    databaseURL: "https://funddistcult.firebaseio.com",
+    projectId: "funddistcult",
+    storageBucket: "funddistcult.appspot.com",
+    messagingSenderId: "518404752811",
+    appId: "1:518404752811:web:279433c309387fddfabeee",
+    measurementId: "G-JK2Y1TP25Y"
+  }
 };
 
 /*

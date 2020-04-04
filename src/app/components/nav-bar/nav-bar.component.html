@@ -21,8 +21,16 @@
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="false">{{login}}</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Cuenta
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink='iniciar-sesion' *ngIf="!logged">Iniciar Sesión</a>
+                    <a class="dropdown-item" routerLink='perfil' *ngIf="logged">Perfil</a>
+                    <a class="dropdown-item" routerLink='registro' *ngIf="!logged">Registro</a>
+                </div>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
