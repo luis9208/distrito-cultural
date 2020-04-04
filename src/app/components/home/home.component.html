@@ -1,23 +1,28 @@
 <div class="container-fluid fondoPeques" >
 
 </div>
-
+<br>
 <div class="container">
-<h3>Nosotros</h3>
-<mat-grid-list cols="4" [style.background]="'lightpink'" rowHeight="100px">
-    <mat-grid-tile
-    [colspan]="3"
-      [rowspan]="1"
-      ><button mat-button color="warn">¿Quiénes somos?</button></mat-grid-tile>
-    
-    <mat-grid-tile>Tile 4 </mat-grid-tile>
-    </mat-grid-list>
+<a href="" routerLink='nosotros' style="padding: 50px;">
+    <mat-grid-list style="background-color: #dc3545 !important;" cols="4"  rowHeight="100px">
+        <mat-grid-tile></mat-grid-tile>
+        <mat-grid-tile
+        [colspan]="2"
+          [rowspan]="1"
+          ><button mat-button color="warn" style="color: white; font-size: 30px">¿Quiénes somos?</button></mat-grid-tile>
+        
+        <mat-grid-tile><span class="material-icons">
+            arrow_forward
+            </span></mat-grid-tile>
+        </mat-grid-list>
+</a>
+
     
 </div>
 
-<div class="container">
-    <h3>¿Qué hacemos?</h3>
-    <mat-grid-list cols="2" [style.background]="'lightblue'" rowHeight="300px">
+<div class="container" style="text-align: center;">
+    <h3 style="color: rgb(220, 53, 69) !important;padding: 50px;">¿Qué hacemos?</h3>
+    <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
         <mat-grid-tile>
             <img src='https://drscdn.500px.org/photo/1013372560/m%3D900/v2?sig=f604d0d4c6a12733439e3972c4b73ea81d3e8fe0234cf163c488ca4179d403ba'
             alt='LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>    
@@ -29,7 +34,7 @@
     </div>
 
     <div class="container">
-        <mat-grid-list cols="2" [style.background]="'lightblue'" rowHeight="300px">
+        <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
             <mat-grid-tile>Formación</mat-grid-tile>
             <mat-grid-tile>
                 <img src='https://drscdn.500px.org/photo/1013372560/m%3D900/v2?sig=f604d0d4c6a12733439e3972c4b73ea81d3e8fe0234cf163c488ca4179d403ba'
