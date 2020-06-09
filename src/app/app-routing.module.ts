@@ -11,12 +11,12 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
-  { path: 'iniciar-sesion', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'nosotros', component: UsComponent },
   { path: 'historia', component: HistoryComponent },
   { path: 'home', component: HomeComponent },
-  {path:'donaciones', component:DonationsComponent}
-  
+  {path:'donaciones', component:DonationsComponent},
+  {path: '**', component:Page404Component}
 ];
 
 @NgModule({
