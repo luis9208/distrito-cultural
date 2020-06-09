@@ -27,6 +27,7 @@ import { UsComponent } from './components/about/us/us.component';
 
 
 import { MatExpansionModule } from '@angular/material/expansion';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     // Fire base
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     BrowserAnimationsModule,  
   ],
   providers: [AngularFireModule],

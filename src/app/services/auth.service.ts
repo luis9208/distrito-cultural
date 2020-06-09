@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -22,16 +23,15 @@ export class AuthService {
   }
 
   loginGoogle() {
-    return this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()).then((result) => {
-     console.log('jsjaja');
-     
-   }).catch((error) => {
-     window.alert(error)
-   })    
+    return this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 
   logout() {
     return this.afAuth.auth.signOut()
+  }
+
+  isAuth(){
+    return this.afAuth.authState.pipe(map(auth=>auth));
   }
 
 }
