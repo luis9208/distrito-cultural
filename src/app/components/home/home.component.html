@@ -1,5 +1,23 @@
 <div *ngIf="logged==false">
     <div class="container-fluid fondoPeques" >
+<div class="container-fluid fondoPeques" >
+
+</div>
+<br>
+<div class="container">
+<a href="" routerLink='nosotros' style="padding: 50px;">
+    <mat-grid-list style="background-color: #dc3545 !important;" cols="4"  rowHeight="100px">
+      
+        <mat-grid-tile
+        [colspan]="3"
+          [rowspan]="1"
+          ><button mat-button color="warn" style="color: white; font-size: 30px">¿Quiénes somos?</button></mat-grid-tile>
+        
+        <mat-grid-tile><span class="material-icons white-a">
+            arrow_forward
+            </span></mat-grid-tile>
+        </mat-grid-list>
+</a>
 
     </div>
     <br>
@@ -57,6 +75,22 @@
 </div>
 <!--<img src='https://drscdn.500px.org/photo/1013378003/m%3D900/v2?sig=a85f9d871e2886023a58c9d65ea8682a6b2f5dcf80abb920ef4b897d9f305d19' 
     alt='fondoPeques by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>-->
+</div>
+
+<div class="container" style="text-align: center;">
+    <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
+        <mat-grid-tile>
+            <img src='../../../assets/img/fotoRecreacion.jpg'
+            alt='LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>    
+        </mat-grid-tile>
+        
+        <mat-grid-tile ><p style="width: 70%;"> Nos encargamos de ocupar el tiempo libre de los niños para incentivar a un mejor futuro. </p></mat-grid-tile>
+        </mat-grid-list>
+        
+    </div>
+
+    <br />
+<!--<img src='https://drscdn.500px.org/photo/1013378003/m%3D900/v2?sig=a85f9d871e2886023a58c9d65ea8682a6b2f5dcf80abb920ef4b897d9f305d19' alt='fondoPeques by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>-->
 
 
 <script type='text/javascript' src='https://500px.com/embed.js'></script>
