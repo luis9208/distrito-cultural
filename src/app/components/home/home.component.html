@@ -1,51 +1,62 @@
-<div class="container-fluid fondoPeques" >
+<div *ngIf="logged==false">
+    <div class="container-fluid fondoPeques" >
 
-</div>
-<br>
-<div class="container">
-<a href="" routerLink='nosotros' style="padding: 50px;">
-    <mat-grid-list style="background-color: #dc3545 !important;" cols="4"  rowHeight="100px">
-      
-        <mat-grid-tile
-        [colspan]="3"
-          [rowspan]="1"
-          ><button mat-button color="warn" style="color: white; font-size: 30px">¿Quiénes somos?</button></mat-grid-tile>
-        
-        <mat-grid-tile><span class="material-icons">
-            arrow_forward
-            </span></mat-grid-tile>
-        </mat-grid-list>
-</a>
-
+    </div>
+    <br>
+    <div class="container">
+    <a href="" routerLink='nosotros' style="padding: 50px;">
+        <mat-grid-list style="background-color: #dc3545 !important;" cols="4"  rowHeight="100px">
+          
+            <mat-grid-tile
+            [colspan]="3"
+              [rowspan]="1"
+              ><button mat-button color="warn" style="color: white; font-size: 30px">¿Quiénes somos?</button></mat-grid-tile>
+            
+            <mat-grid-tile><span class="material-icons">
+                arrow_forward
+                </span></mat-grid-tile>
+            </mat-grid-list>
+    </a>
     
-</div>
-
-<div class="container" style="text-align: center;">
-    <h3 style="color: rgb(220, 53, 69) !important;padding: 50px;">¿Qué hacemos?</h3>
-    <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
-        <mat-grid-tile>
-            <img src='https://drscdn.500px.org/photo/1013372560/m%3D900/v2?sig=f604d0d4c6a12733439e3972c4b73ea81d3e8fe0234cf163c488ca4179d403ba'
-            alt='LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>    
-        </mat-grid-tile>
-        
-        <mat-grid-tile>Recreación</mat-grid-tile>
-        </mat-grid-list>
         
     </div>
-
-    <div class="container">
-        <mat-grid-list cols="2" [style.background]="''" rowHeight="320px">
-            <mat-grid-tile>Formación</mat-grid-tile>
+    
+    <div class="container" style="text-align: center;">
+        <h3 style="color: rgb(220, 53, 69) !important;padding: 50px;">¿Qué hacemos?</h3>
+        <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
             <mat-grid-tile>
                 <img src='https://drscdn.500px.org/photo/1013372560/m%3D900/v2?sig=f604d0d4c6a12733439e3972c4b73ea81d3e8fe0234cf163c488ca4179d403ba'
                 alt='LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>    
             </mat-grid-tile>
             
-            
+            <mat-grid-tile>Recreación</mat-grid-tile>
             </mat-grid-list>
             
         </div>
-<!--<img src='https://drscdn.500px.org/photo/1013378003/m%3D900/v2?sig=a85f9d871e2886023a58c9d65ea8682a6b2f5dcf80abb920ef4b897d9f305d19' alt='fondoPeques by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>-->
+    
+        <div class="container">
+            <mat-grid-list cols="2" [style.background]="''" rowHeight="320px">
+                <mat-grid-tile>Formación</mat-grid-tile>
+                <mat-grid-tile>
+                    <img src='https://drscdn.500px.org/photo/1013372560/m%3D900/v2?sig=f604d0d4c6a12733439e3972c4b73ea81d3e8fe0234cf163c488ca4179d403ba'
+                    alt='LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>    
+                </mat-grid-tile>
+                
+                
+                </mat-grid-list>
+                
+            </div>
+</div>
+<div *ngIf="logged">
+    
+    <p>
+        login como admin
+    </p>
+    
+    
+</div>
+<!--<img src='https://drscdn.500px.org/photo/1013378003/m%3D900/v2?sig=a85f9d871e2886023a58c9d65ea8682a6b2f5dcf80abb920ef4b897d9f305d19' 
+    alt='fondoPeques by DIANA MARCELA GOMEZ CAICEDO on 500px.com'>-->
 
 
 <script type='text/javascript' src='https://500px.com/embed.js'></script>
