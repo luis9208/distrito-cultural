@@ -29,6 +29,7 @@ import { UsComponent } from './components/about/us/us.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule} from '@angular/fire/storage';
+import { InicioComponent } from './components/admin/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AngularFireStorageModule} from '@angular/fire/storage';
     NavBarComponent,
     DonationsComponent,
     HistoryComponent,
-    UsComponent
+    UsComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
