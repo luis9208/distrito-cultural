@@ -20,7 +20,9 @@ const routes: Routes = [
   {path:'donaciones', component:DonationsComponent},
   {path: 'perfil', component:ProfileComponent},
   {path: 'admin', component:InicioComponent},
-  {path:'tesoreria', component:TesoreriaComponent},
+
+  {path: 'tesoreria', component:TesoreriaComponent},
+
   {path: '**', component:Page404Component}
 ];
 
