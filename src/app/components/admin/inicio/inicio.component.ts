@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,8 +11,10 @@ import { AngularFireStorage } from '@angular/fire/storage';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+  private uploadPercent: Observable<number>;
+  private urlImage: Observable<string>;
 
-  constructor(private storage: AngularFireStorage) { }
+  constructor(private storage: AngularFireStorage, private route:Router) { }
 
   ngOnInit() {
   }
@@ -17,12 +22,19 @@ export class InicioComponent implements OnInit {
   upload(e){
     let id = Math.random().toString(36).substring(2);
     let file = e.target.files[0];
-    console.log(file.name);
     
-    let filePath = `eventos/imagenes/${id}_${file}`;
+    let filePath = `eventos/imagenes/${id}_${file.name}`;
+    
     let ref = this.storage.ref(filePath);
     let task = this.storage.upload(filePath, file);
+    this.uploadPercent = task.percentageChanges();
+    task.snapshotChanges().pipe(finalize(()=>this.urlImage= ref.getDownloadURL() ))
+      .subscribe();
 
+  }
+
+  subir(){
+    this.route.navigate(['']);
   }
 
 }
