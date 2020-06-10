@@ -8,6 +8,7 @@ import { Page404Component } from './components/page404/page404.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/users/profile/profile.component';
 import { InicioComponent } from './components/admin/inicio/inicio.component';
+import { TesoreriaComponent } from './components/admin/tesoreria/tesoreria.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'donaciones', component:DonationsComponent},
   {path: 'perfil', component:ProfileComponent},
   {path: 'admin', component:InicioComponent},
+  {path:'tesoreria', component:TesoreriaComponent},
   {path: '**', component:Page404Component}
 ];
 

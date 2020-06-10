@@ -1,7 +1,7 @@
-<div class="form-group">
-    <label for="imagen"> Selecciona una imagen para cargar</label>
-    <input type="file"  id="imagen" accept=".png, .jpg" (change)="upload($event)">
+ <div class="form-group">
+            <label for="imagen"> Selecciona una imagen para cargar</label>
+            <input type="file"  id="imagen" accept="image/*" (change)="upload($event)">
 
 </div>
 
-<button class="btn btn-success btn-block " (click)="upload" >Subir Imagen </button>
+        <button class="btn btn-success btn-block " (click)="subir()" >Subir Imagen </button>

@@ -29,6 +29,7 @@ import { UsComponent } from './components/about/us/us.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule} from '@angular/fire/storage';
+import { AngularFirestore} from '@angular/fire/firestore';
 import { InicioComponent } from './components/admin/inicio/inicio.component';
 
 @NgModule({
@@ -62,7 +63,7 @@ import { InicioComponent } from './components/admin/inicio/inicio.component';
     AngularFireStorageModule,
     BrowserAnimationsModule,  
   ],
-  providers: [AngularFireModule],
+  providers: [AngularFireModule,AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

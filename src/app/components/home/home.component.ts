@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { isUndefined } from 'util';
 import { Router } from '@angular/router';
+import { DataApiService } from 'src/app/services/data-api.service';
+import { Eventos } from 'src/app/models/eventos';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,14 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   logged = false;
+  eventos= [];
 
-  constructor(private auth: AuthService, private route: Router ) { }
+
+  constructor(private auth: AuthService, private route: Router, private api: DataApiService ) { }
 
   ngOnInit() {
     this.isLogged();
+    this.load();
   }
 
   private isLogged() {
@@ -32,6 +36,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  private load(){
+    this.api.getEventos().subscribe({
+      next: (eventos: Eventos[])=>{
+          for (const e of eventos) {
+              this.eventos.push(e);
+          }
+                  
+      }
+    } );
+  }
  
 
 }
