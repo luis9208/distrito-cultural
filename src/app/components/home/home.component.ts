@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { isUndefined } from 'util';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   logged = false;
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private route: Router ) { }
 
   ngOnInit() {
     this.isLogged();
@@ -20,13 +22,16 @@ export class HomeComponent implements OnInit {
     
     this.auth.isAuth().subscribe({
       next: (data)=>{
-          
-          this.logged = true;
+          if(data){
+          this.route.navigate(['admin']);
+        }
       },
       error: (err)=>{
         
       }
     });
   }
+
+ 
 
 }

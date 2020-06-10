@@ -24,9 +24,8 @@
                 </li>
     
                 <li class="li-nav nav-item pull-right" style="float: none;
-                display: inline-block;" *ngIf="logged==false">
+                display: inline-block;" *ngIf="!logged">
                     <a class="text-white nav-link " routerLink='login' tabindex="-1" aria-disabled="false" >{{login}}</a>
-
                 </li>
 
                 <li class="li-nav pull-right nav-item dropdown" *ngIf="logged">
