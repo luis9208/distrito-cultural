@@ -7,18 +7,22 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-a{
+/* a{
     color: white !important;
-}
+} */
 
-.text-white{
+/* .text-white{
     color: white !important;
+<<<<<<< HEAD
 }
 
 /*
 styles propios
 */
 
+=======
+} */
+>>>>>>> 37c63e164b076dde836c56ab414fd69dee9fc05f
 .navbarAlinear {
     width: 100%;
     text-align: center;
