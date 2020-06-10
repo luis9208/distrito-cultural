@@ -5,13 +5,28 @@
                 <h3 class="card-title">Imagenes de eventos</h3>
                 <div class="row">
                     <div class="form-group">
-                      <label for="">Selecciona una imagen para cargar</label>
-                      <input type="file"  accept="image/*" class="form-control-file" id=""
-                       (change)="upload($event)"  aria-describedby="fileHelpId">
+                      <label for="nombre">Nombre del Evento</label>
+                      <input type="text" [(ngModel)]="evento.nombre"
+                        class="form-control"  id="nombre" aria-describedby="helpId">
                     </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion</label>
+                        <textarea class="form-control" [(ngModel)]="evento.descripcion" id="descripcion" rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label for="">Selecciona una imagen para cargar</label>
+                        <input type="file"  accept="image/*" class="form-control-file" id=""
+                         (change)="upload($event)"  aria-describedby="fileHelpId">
+                    </div>
+                </div>
 
                     <button class="btn btn-success btn-block " (click)="subir()">Subir Imagen </button>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -24,7 +39,7 @@
                     <div class="form-group">
                       <label for="">Selecciona un documento</label>
                       <input type="file"  accept="{{extensiones}}" class="form-control-file" id=""
-                       (change)="uploadDocs($event)"  aria-describedby="fileHelpId">
+                      (change)="uploadDocs($event)"  aria-describedby="fileHelpId">
                     </div>
 
                     <button class="btn btn-success btn-block " (click)="subir()">Subir Documento </button>
@@ -33,6 +48,7 @@
         </div>
     </div>
 </div>
+<hr>
 <div class="container" style="text-align: center;" *ngFor="let item of documentos">
     <mat-grid-list cols="2" [style.background]="''" rowHeight="120px">
       <mat-grid-tile>

@@ -31,6 +31,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule} from '@angular/fire/storage';
 import { AngularFirestore} from '@angular/fire/firestore';
 import { InicioComponent } from './components/admin/inicio/inicio.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,8 @@ import { InicioComponent } from './components/admin/inicio/inicio.component';
     MatExpansionModule,
     MatButtonModule,
     MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule,
     // Fire base
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
