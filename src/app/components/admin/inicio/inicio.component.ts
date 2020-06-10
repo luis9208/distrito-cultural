@@ -48,8 +48,6 @@ export class InicioComponent implements OnInit {
     let file = e.target.files[0];
     let filePath = `Documentos/${file.name}`;
     this.storage.subir(filePath, file);
-    
-    
   }
 
   subir(){
