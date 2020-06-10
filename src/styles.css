@@ -13,20 +13,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* .text-white{
     color: white !important;
-<<<<<<< HEAD
 }
 
 /*
 styles propios
 */
 
-=======
-} */
->>>>>>> 37c63e164b076dde836c56ab414fd69dee9fc05f
 .navbarAlinear {
     width: 100%;
     text-align: center;
    
+}
+.white-a{
+    color: white !important;
 }
 .fondoPeques{
     width: 100% !important;
