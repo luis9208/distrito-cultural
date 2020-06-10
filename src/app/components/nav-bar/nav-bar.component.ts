@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,8 +13,15 @@ export class NavBarComponent implements OnInit {
   login = 'Iniciar sesión';
 
   constructor(private auth: AuthService) { }
+
   ngOnInit() {
 
+    this.isLogged();
+
+  }
+
+  private isLogged() {
+    
     this.auth.isAuth().subscribe({
       next: (data)=>{
         this.logged = true;
@@ -21,14 +29,18 @@ export class NavBarComponent implements OnInit {
         
       },
       error: (err)=>{
-        this.login;
+        
       }
     });
-
   }
 
-  isLogged() {
-    
+  salir(){
+    this.auth.logout().then((res)=>{
+      this.logged = false;
+      this.login = 'Iniciar sesion';
+    }).catch((err)=>{
+      
+    })
   }
 
   
