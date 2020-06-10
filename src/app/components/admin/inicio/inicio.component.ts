@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/storage';
-import { finalize } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { StorageService } from 'src/app/services/storage.service';
+import { DataApiService } from 'src/app/services/data-api.service';
+import { Documentos } from 'src/app/models/documents';
 
 
 @Component({
@@ -13,10 +14,17 @@ import { Router } from '@angular/router';
 export class InicioComponent implements OnInit {
   private uploadPercent: Observable<number>;
   private urlImage: Observable<string>;
+  extensiones:string;
+  documentos =[];
 
-  constructor(private storage: AngularFireStorage, private route:Router) { }
+  constructor(private storage: StorageService, 
+    private api: DataApiService,
+    private route:Router) {
+    this.extensiones='.doc, .docx, .pdf '
+   }
 
   ngOnInit() {
+    this.load();
   }
 
   upload(e){
@@ -24,17 +32,30 @@ export class InicioComponent implements OnInit {
     let file = e.target.files[0];
     
     let filePath = `eventos/imagenes/${id}_${file.name}`;
+    this.storage.subir(filePath, file);
     
-    let ref = this.storage.ref(filePath);
-    let task = this.storage.upload(filePath, file);
-    this.uploadPercent = task.percentageChanges();
-    task.snapshotChanges().pipe(finalize(()=>this.urlImage= ref.getDownloadURL() ))
-      .subscribe();
+  }
 
+  uploadDocs(e){
+    let file = e.target.files[0];
+    let filePath = `Documentos/${file.name}`;
+    this.storage.subir(filePath, file);   
   }
 
   subir(){
+
     this.route.navigate(['']);
+
+  }
+
+  load(){
+    this.api.getDocuments().subscribe({
+      next: (docs: Documentos[])=>{
+        for (const doc of docs) {
+          this.documentos.push(doc);
+        }
+      }
+    })
   }
 
 }

@@ -1,7 +1,62 @@
- <div class="form-group">
-            <label for="imagen"> Selecciona una imagen para cargar</label>
-            <input type="file"  id="imagen" accept="image/*" (change)="upload($event)">
+<div class="row">
+    <div class="col-xs-1-12">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Imagenes de eventos</h3>
+                <div class="row">
+                    <div class="form-group">
+                      <label for="">Selecciona una imagen para cargar</label>
+                      <input type="file"  accept="image/*" class="form-control-file" id=""
+                       (change)="upload($event)"  aria-describedby="fileHelpId">
+                    </div>
 
+                    <button class="btn btn-success btn-block " (click)="subir()">Subir Imagen </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-1-12">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Actas y documentos</h3>
+                <div class="row">
+                    <div class="form-group">
+                      <label for="">Selecciona un documento</label>
+                      <input type="file"  accept="{{extensiones}}" class="form-control-file" id=""
+                       (change)="uploadDocs($event)"  aria-describedby="fileHelpId">
+                    </div>
+
+                    <button class="btn btn-success btn-block " (click)="subir()">Subir Documento </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="container" style="text-align: center;" *ngFor="let item of documentos">
+    <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
+      <mat-grid-tile>
+        <a href="{{item.url}}" class="btn btn-primary active" role="button">
+            Enlace al Documento
+        </a>
+      </mat-grid-tile>
 
-        <button class="btn btn-success btn-block " (click)="subir()" >Subir Imagen </button>
+      <mat-grid-tile>
+        <p style="width: 70%;">
+            <strong>{{item.nombre}} </strong>
+            <br>
+            {{item.descripcion}}
+        </p>
+        <p>
+            <strong>Fecha del Acta</strong>
+            {{ item.fecha.seconds * 1000 |  date: 'yyyy/MM/dd'}}
+        </p>
+        <p>
+            <strong>Firmada</strong>
+            <span *ngIf="item.firmada">
+                El acta esta firmada
+            </span>
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

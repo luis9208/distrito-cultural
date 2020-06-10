@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: "app-tesoreria",
@@ -113,7 +115,12 @@ export class TesoreriaComponent implements OnInit {
   changeValue(id: number, property: string, event: any) {
     this.editField = event.target.textContent;
   }
-  constructor() {}
+  constructor(private route: Router, private afs: AngularFireStorage ) {}
 
   ngOnInit() {}
+
+  soporte(){
+
+
+  }
 }
