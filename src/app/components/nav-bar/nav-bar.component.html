@@ -24,8 +24,20 @@
                 </li>
     
                 <li class="li-nav nav-item pull-right" style="float: none;
-                display: inline-block;">
-                    <a class="text-white nav-link " routerLink='login' tabindex="-1" aria-disabled="false">{{login}}</a>
+                display: inline-block;" *ngIf="logged==false">
+                    <a class="text-white nav-link " routerLink='login' tabindex="-1" aria-disabled="false" >{{login}}</a>
+
+                </li>
+
+                <li class="li-nav pull-right nav-item dropdown" *ngIf="logged">
+                    <a class="text-white nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        {{login}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="text-white dropdown-item" routerLink='perfil'>Perfil</a>
+                        <a class="text-white dropdown-item" (click)="salir()">salir</a>
+                    </div>
                 </li>
             </ul>
         </div>
