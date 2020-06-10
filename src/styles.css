@@ -34,6 +34,10 @@ styles propios
     height: 500px;
     background-image: url('/assets/img/bannerFundacion.png');
 }
+.center-text{
+    display: flex;
+   align-items: center;
+}
 .li-nav{
     float: none;
     display: inline-block;
