@@ -46,30 +46,34 @@
     </mat-grid-list>
   </div>
    <br>
-   
-  <!-- datos desde firebase -->
-  <div class="container" style="text-align: center;" *ngFor="let item of eventos">
-    <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
-      <mat-grid-tile>
-        <img
-          src="{{item.imagenes}}"
-          alt="LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com"
-        />
-      </mat-grid-tile>
 
-      <mat-grid-tile>
-        <p style="width: 70%;">
-            <strong>{{item.nombre}} </strong>
-            <br>
-            {{item.descripcion}}
-        </p>
-        <p>
-            <strong>Fecha del Evento</strong>
-            {{ item.fecha.seconds * 1000 |  date: 'yyyy/MM/dd'}}
-        </p>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
+  <!-- datos desde firebase -->
+  <div *ngFor="let item of eventos">
+ 
+    <div class="container" style="text-align: center;" >
+        <mat-grid-list cols="2" [style.background]="''" rowHeight="300px">
+        <mat-grid-tile>
+            <img
+            src="{{item.imagenes}}"
+            alt="LogoDistrito by DIANA MARCELA GOMEZ CAICEDO on 500px.com"
+            />
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <p style="width: 70%;">
+                <strong>{{item.nombre}} </strong>
+                <br>
+                {{item.descripcion}}
+            </p>
+            <p>
+                <strong>Fecha del Evento</strong>
+                {{ item.fecha.seconds * 1000 |  date: 'yyyy/MM/dd'}}
+            </p>
+        </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <br>
+</div>
 </div>
 
 <!--<img src='https://drscdn.500px.org/photo/1013378003/m%3D900/v2?sig=a85f9d871e2886023a58c9d65ea8682a6b2f5dcf80abb920ef4b897d9f305d19' 

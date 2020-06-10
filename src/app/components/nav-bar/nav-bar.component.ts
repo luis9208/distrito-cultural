@@ -31,7 +31,7 @@ export class NavBarComponent implements OnInit {
        if(isUndefined(data) || data !=null){
         this.logged = true;
         this.login = data.displayName;
-        this.route.navigate(['perfil']);
+        this.route.navigate(['']);
        }
       },
       error: (err)=>{
