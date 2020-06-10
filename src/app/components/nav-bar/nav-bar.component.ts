@@ -12,8 +12,15 @@ export class NavBarComponent implements OnInit {
   login = 'Iniciar sesión';
 
   constructor(private auth: AuthService) { }
+
   ngOnInit() {
 
+    this.isLogged();
+
+  }
+
+  private isLogged() {
+    
     this.auth.isAuth().subscribe({
       next: (data)=>{
         this.logged = true;
@@ -21,14 +28,9 @@ export class NavBarComponent implements OnInit {
         
       },
       error: (err)=>{
-        this.login;
+        
       }
     });
-
-  }
-
-  isLogged() {
-    
   }
 
   
