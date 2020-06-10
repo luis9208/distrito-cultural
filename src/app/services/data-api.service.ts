@@ -24,6 +24,9 @@ export class DataApiService {
     this.documentos = this.documentsCollection.valueChanges();
   }
 
+  addEvento(evento: Eventos){
+    this.fotosCollection.add(evento);
+  }
   getEventos(){
     return this.fotos;
   }
