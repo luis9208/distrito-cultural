@@ -9,42 +9,48 @@
                         <form>
 
                             <fieldset class="form-group">
-                                <legend class="col-form-legend col-sm-6">Iniciar sesión</legend>
+                                <legend class="col-form-legend ">Iniciar sesión</legend>
 
                                 <div class="form-group">
-                                    <label for="correo">Correo</label>
                                     <input type="email" class="form-control" name="correo" id="correo"
                                         aria-describedby="emailHelpId" placeholder="correo">
                                 </div>
                                 <div class="form-group">
-                                    <label for="contraseña">Contraseña</label>
                                     <input type="text" class="form-control" name="contraseña" id="contraseña"
                                         aria-describedby="helpId" placeholder="contraseña">
                                 </div>
                             </fieldset>
                             <div class="form-group row">
-                                <div class="offset-sm-2 col-sm-12">
-                                    <button type="submit" class="btn btn-primary large">Iniciar</button>
+                                <div class="col-sm-12">
+                                    <button type="submit" style="width:100%; border-radius: 15px;background-color: white; border: 3px solid #dc3545; color: #dc3545" class="btn  large">Iniciar sesión</button>
                                 </div>
                             </div>
                         </form>
 
+                        <h5>
+                            También puedes iniciar sesión con
+                        </h5>
                         <div class="form-group row">
-                            <div class="col-sm-2 col-sm-12">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-sm-6">
+                                <button type="submit" style="width: 100%;" class="btn btn-primary">
                                     <span>
-                                        Facebook <i class="fa fa-facebook" aria-hidden="true"></i>
+                                         <i class="fa fa-facebook" aria-hidden="true"> Facebook</i>
+                                    </span>
+                                </button>
+                                
+                                
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="button" style="width: 100%;background-color: #d93025;color: white;" class="btn btn-success" (click)="login()">
+                                    <span>
+                                        <i class="fa fa-google" aria-hidden="true"> Google </i>
                                     </span>
                                 </button>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <button type="button" class="btn btn-success" (click)="login()">
-                                <span>
-                                    <i class="fa fa-google" aria-hidden="true"> Google </i>
-                                </span>
-                            </button>
+                            
                         </div>
 
                     </div>
